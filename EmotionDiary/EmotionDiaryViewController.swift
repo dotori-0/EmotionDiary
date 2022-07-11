@@ -9,6 +9,9 @@ import UIKit
 
 class EmotionDiaryViewController: UIViewController {
 
+    // Background
+    @IBOutlet weak var backgroundImageView: UIImageView!
+
     // Buttons
     @IBOutlet weak var slime0Button: UIButton!
     @IBOutlet weak var slime1Button: UIButton!
@@ -81,6 +84,8 @@ class EmotionDiaryViewController: UIViewController {
         emotionCountArray = [emotion0Count, emotion1Count, emotion2Count, emotion3Count, emotion4Count,
                                  emotion5Count, emotion6Count, emotion7Count, emotion8Count]
 
+        backgroundImageView.contentMode = .scaleToFill
+        backgroundImageView.image = UIImage(named: "PaperBackground")
 
         designButtons(buttonArray)
 //        designLabels(labelDict: labelDict, emotionCountArray: emotionCountArray)
