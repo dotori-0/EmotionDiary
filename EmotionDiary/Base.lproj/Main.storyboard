@@ -457,6 +457,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="geh-Yt-nGU" userLabel="background">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="감정 다이어리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUT-1H-S5d">
                                 <rect key="frame" x="161" y="54" width="92.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -489,6 +492,9 @@
                                                         <buttonConfiguration key="configuration" style="plain" title="Button">
                                                             <backgroundConfiguration key="background"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="slimeButtonClicked:" destination="LpT-0e-6K3" eventType="touchUpInside" id="JXm-5q-Yzx"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sr-tQ-qM7">
                                                         <rect key="frame" x="0.0" y="94.5" width="86.5" height="20"/>
@@ -508,7 +514,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="r5j-yA-JPZ" userLabel="1 Stack View">
                                                 <rect key="frame" x="101.5" y="0.0" width="87" height="114.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3oQ-dO-qG0">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3oQ-dO-qG0">
                                                         <rect key="frame" x="0.0" y="0.0" width="87" height="86.5"/>
                                                         <color key="backgroundColor" red="0.88137194939999997" green="0.87436698700000004" blue="0.9389637649" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
@@ -518,6 +524,9 @@
                                                         <buttonConfiguration key="configuration" style="plain" title="Button">
                                                             <backgroundConfiguration key="background" image="sesac_slime2"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="slimeButtonClicked:" destination="LpT-0e-6K3" eventType="touchUpInside" id="wjp-XN-7eX"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tmc-zv-0pJ">
                                                         <rect key="frame" x="0.0" y="94.5" width="87" height="20"/>
@@ -537,7 +546,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="14K-pZ-45h" userLabel="2 Stack View">
                                                 <rect key="frame" x="203.5" y="0.0" width="86.5" height="114.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUg-qv-dx6">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUg-qv-dx6">
                                                         <rect key="frame" x="0.0" y="0.0" width="86.5" height="86.5"/>
                                                         <color key="backgroundColor" red="0.88137194939999997" green="0.87436698700000004" blue="0.9389637649" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
@@ -545,6 +554,9 @@
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                        <connections>
+                                                            <action selector="slimeButtonClicked:" destination="LpT-0e-6K3" eventType="touchUpInside" id="Zjn-D6-bog"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IhS-jk-XaQ">
                                                         <rect key="frame" x="0.0" y="94.5" width="86.5" height="20"/>
@@ -569,7 +581,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DLI-W3-nVZ" userLabel="0 Stack View">
                                                 <rect key="frame" x="0.0" y="0.0" width="86.5" height="115"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cL-sw-6Yq">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cL-sw-6Yq">
                                                         <rect key="frame" x="0.0" y="0.0" width="86.5" height="87"/>
                                                         <color key="backgroundColor" red="0.88137194939999997" green="0.87436698700000004" blue="0.9389637649" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
@@ -577,6 +589,9 @@
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                        <connections>
+                                                            <action selector="slimeButtonClicked:" destination="LpT-0e-6K3" eventType="touchUpInside" id="y0A-pJ-9Xl"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SvH-Tx-fos">
                                                         <rect key="frame" x="0.0" y="95" width="86.5" height="20"/>
@@ -596,7 +611,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dAX-El-vvD" userLabel="1 Stack View">
                                                 <rect key="frame" x="101.5" y="0.0" width="87" height="115"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVA-nU-UdI">
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVA-nU-UdI">
                                                         <rect key="frame" x="0.0" y="0.0" width="87" height="87"/>
                                                         <color key="backgroundColor" red="0.88137194939999997" green="0.87436698700000004" blue="0.9389637649" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
@@ -604,6 +619,9 @@
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                        <connections>
+                                                            <action selector="slimeButtonClicked:" destination="LpT-0e-6K3" eventType="touchUpInside" id="Ftu-x4-WAs"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZC-0t-Dg9">
                                                         <rect key="frame" x="0.0" y="95" width="87" height="20"/>
@@ -623,7 +641,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="d7E-te-Jwo" userLabel="2 Stack View">
                                                 <rect key="frame" x="203.5" y="0.0" width="86.5" height="115"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfb-8E-HB0">
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfb-8E-HB0">
                                                         <rect key="frame" x="0.0" y="0.0" width="86.5" height="87"/>
                                                         <color key="backgroundColor" red="0.88137194939999997" green="0.87436698700000004" blue="0.9389637649" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
@@ -631,6 +649,9 @@
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                        <connections>
+                                                            <action selector="slimeButtonClicked:" destination="LpT-0e-6K3" eventType="touchUpInside" id="Vpd-CG-0eA"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSr-CK-GFL">
                                                         <rect key="frame" x="0.0" y="95" width="86.5" height="20"/>
@@ -655,7 +676,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="n27-P5-c1S" userLabel="0 Stack View">
                                                 <rect key="frame" x="0.0" y="0.0" width="86.5" height="114.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ll1-if-dqq">
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ll1-if-dqq">
                                                         <rect key="frame" x="0.0" y="0.0" width="86.5" height="86.5"/>
                                                         <color key="backgroundColor" red="0.88137194939999997" green="0.87436698700000004" blue="0.9389637649" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
@@ -663,6 +684,9 @@
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                        <connections>
+                                                            <action selector="slimeButtonClicked:" destination="LpT-0e-6K3" eventType="touchUpInside" id="if1-yL-82f"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYW-tg-HDe">
                                                         <rect key="frame" x="0.0" y="94.5" width="86.5" height="20"/>
@@ -682,7 +706,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2cF-F5-KDR" userLabel="1 Stack View">
                                                 <rect key="frame" x="101.5" y="0.0" width="87" height="114.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgz-pC-8Q7">
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgz-pC-8Q7">
                                                         <rect key="frame" x="0.0" y="0.0" width="87" height="86.5"/>
                                                         <color key="backgroundColor" red="0.88137194939999997" green="0.87436698700000004" blue="0.9389637649" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
@@ -690,6 +714,9 @@
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                        <connections>
+                                                            <action selector="slimeButtonClicked:" destination="LpT-0e-6K3" eventType="touchUpInside" id="7cZ-nW-G7B"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PtJ-0t-oXr">
                                                         <rect key="frame" x="0.0" y="94.5" width="87" height="20"/>
@@ -709,7 +736,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xc9-qy-rOl" userLabel="2 Stack View">
                                                 <rect key="frame" x="203.5" y="0.0" width="86.5" height="114.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Og7-DW-o2a">
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Og7-DW-o2a">
                                                         <rect key="frame" x="0.0" y="0.0" width="86.5" height="86.5"/>
                                                         <color key="backgroundColor" red="0.88137194939999997" green="0.87436698700000004" blue="0.9389637649" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
@@ -717,6 +744,9 @@
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                        <connections>
+                                                            <action selector="slimeButtonClicked:" destination="LpT-0e-6K3" eventType="touchUpInside" id="sbJ-lN-4em"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8h-ql-OF1">
                                                         <rect key="frame" x="0.0" y="94.5" width="86.5" height="20"/>
@@ -746,16 +776,21 @@
                         <viewLayoutGuide key="safeArea" id="npj-aI-sjy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="npj-aI-sjy" firstAttribute="trailing" secondItem="geh-Yt-nGU" secondAttribute="trailing" id="2Ub-aj-44a"/>
+                            <constraint firstItem="geh-Yt-nGU" firstAttribute="leading" secondItem="npj-aI-sjy" secondAttribute="leading" id="CbJ-Rq-zMM"/>
                             <constraint firstItem="irk-Fy-CwG" firstAttribute="leading" secondItem="npj-aI-sjy" secondAttribute="leading" constant="20" id="Cw9-3I-AyP"/>
                             <constraint firstItem="llG-sm-z8K" firstAttribute="centerY" secondItem="4Fk-ds-9Fw" secondAttribute="centerY" id="Kky-9z-z6R"/>
                             <constraint firstItem="AUT-1H-S5d" firstAttribute="top" secondItem="npj-aI-sjy" secondAttribute="top" constant="10" id="MG2-PZ-NH4"/>
+                            <constraint firstAttribute="bottom" secondItem="geh-Yt-nGU" secondAttribute="bottom" id="NRb-hS-JmT"/>
                             <constraint firstItem="llG-sm-z8K" firstAttribute="centerX" secondItem="4Fk-ds-9Fw" secondAttribute="centerX" id="R6k-G6-HEV"/>
                             <constraint firstItem="llG-sm-z8K" firstAttribute="width" secondItem="4Fk-ds-9Fw" secondAttribute="width" multiplier="0.7" id="Riy-mC-n6z"/>
                             <constraint firstItem="AUT-1H-S5d" firstAttribute="centerX" secondItem="4Fk-ds-9Fw" secondAttribute="centerX" id="e7w-ED-qpz"/>
+                            <constraint firstItem="geh-Yt-nGU" firstAttribute="top" secondItem="4Fk-ds-9Fw" secondAttribute="top" id="u4I-Sv-2pM"/>
                             <constraint firstItem="irk-Fy-CwG" firstAttribute="centerY" secondItem="AUT-1H-S5d" secondAttribute="centerY" id="vdo-l1-BUk"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundImageView" destination="geh-Yt-nGU" id="qoV-qt-Um9"/>
                         <outlet property="emotion0Label" destination="2sr-tQ-qM7" id="NhU-rx-Dzd"/>
                         <outlet property="emotion1Label" destination="Tmc-zv-0pJ" id="evR-PD-HRk"/>
                         <outlet property="emotion2Label" destination="IhS-jk-XaQ" id="gOA-PS-Adi"/>

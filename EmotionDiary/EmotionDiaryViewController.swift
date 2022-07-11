@@ -146,9 +146,40 @@ class EmotionDiaryViewController: UIViewController {
         }
     }
 
-
+    func updateCount(_ selected: Int) {
+        emotionCountArray[selected] += 1
+        labelArray[selected].text = emotionDescription[selected] + " " + String(emotionCountArray[selected])
+    }
 
     // MARK: - Actions
 
 
+    @IBAction func slimeButtonClicked(_ sender: UIButton) {
+        var selected: Int = 0
+
+        switch sender.tag {
+        case 0:
+            selected = 0
+        case 1:
+            selected = 1
+        case 2:
+            selected = 2
+        case 3:
+            selected = 3
+        case 4:
+            selected = 4
+        case 5:
+            selected = 5
+        case 6:
+            selected = 6
+        case 7:
+            selected = 7
+        case 8:
+            selected = 8
+        default:
+            print("default")
+        }
+
+        updateCount(selected)
+    }
 }
