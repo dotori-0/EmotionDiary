@@ -13,6 +13,7 @@
 		0AD797D1287BA3E200316461 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AD797CF287BA3E200316461 /* Main.storyboard */; };
 		0AD797D3287BA3E500316461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AD797D2287BA3E500316461 /* Assets.xcassets */; };
 		0AD797D6287BA3E500316461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AD797D4287BA3E500316461 /* LaunchScreen.storyboard */; };
+		0AD797FE287C32DB00316461 /* EmotionDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD797FD287C32DB00316461 /* EmotionDiaryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0AD797D2287BA3E500316461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AD797D5287BA3E500316461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AD797D7287BA3E500316461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AD797FD287C32DB00316461 /* EmotionDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionDiaryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				0AD797CB287BA3E200316461 /* SceneDelegate.swift */,
 				0AD797CD287BA3E200316461 /* ViewController.swift */,
 				0AD797CF287BA3E200316461 /* Main.storyboard */,
+				0AD797FD287C32DB00316461 /* EmotionDiaryViewController.swift */,
 				0AD797D2287BA3E500316461 /* Assets.xcassets */,
 				0AD797D4287BA3E500316461 /* LaunchScreen.storyboard */,
 				0AD797D7287BA3E500316461 /* Info.plist */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AD797FE287C32DB00316461 /* EmotionDiaryViewController.swift in Sources */,
 				0AD797CE287BA3E200316461 /* ViewController.swift in Sources */,
 				0AD797CA287BA3E200316461 /* AppDelegate.swift in Sources */,
 				0AD797CC287BA3E200316461 /* SceneDelegate.swift in Sources */,
