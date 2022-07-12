@@ -36,20 +36,33 @@ class EmotionDiaryViewController: UIViewController {
     @IBOutlet weak var emotion8Label: UILabel!
 
     // Counts
-    var emotion0Count = 0
-    var emotion1Count = 0
-    var emotion2Count = 0
-    var emotion3Count = 0
-    var emotion4Count = 0
-    var emotion5Count = 0
-    var emotion6Count = 0
-    var emotion7Count = 0
-    var emotion8Count = 0
+//    var emotion0Count = 0
+//    var emotion1Count = 0
+//    var emotion2Count = 0
+//    var emotion3Count = 0
+//    var emotion4Count = 0
+//    var emotion5Count = 0
+//    var emotion6Count = 0
+//    var emotion7Count = 0
+//    var emotion8Count = 0
 
 //    var labelDict: [UILabel: String] = [:]
-    var labelArray: [UILabel] = []
+//    var labelArray: [UILabel] = []
+    var labelTupleArray: [(UILabel, EmotionDescription, Int)] = []
     var emotionCountArray: [Int] = []
     var emotionDescription = ["행복해", "좋아해", "사랑해", "분노해", "심심해", "답답해", "당황해", "우울해", "한심해"]
+
+    enum EmotionDescription: String {
+        case happy = "행복해"
+        case fond = "좋아해"
+        case love = "사랑해"
+        case furious = "분노해"
+        case bored = "심심해"
+        case frustrated = "답답해"
+        case embarrassed = "당황해"
+        case depressed = "우울해"
+        case pathetic = "한심해"
+    }
 
 
     override func viewDidLoad() {
@@ -78,11 +91,25 @@ class EmotionDiaryViewController: UIViewController {
 //                         emotion7Label: ["우울해", 0],
 //                         emotion8Label: ["한심해", 0]]
 
-        labelArray = [emotion0Label, emotion1Label, emotion2Label, emotion3Label, emotion4Label,
-                      emotion5Label, emotion6Label, emotion7Label, emotion8Label]
+//        labelArray = [emotion0Label, emotion1Label, emotion2Label, emotion3Label, emotion4Label,
+//                    emotion5Label, emotion6Label, emotion7Label, emotion8Label]
 
-        emotionCountArray = [emotion0Count, emotion1Count, emotion2Count, emotion3Count, emotion4Count,
-                                 emotion5Count, emotion6Count, emotion7Count, emotion8Count]
+//        emotionCountArray = [emotion0Count, emotion1Count, emotion2Count, emotion3Count, emotion4Count,
+//                                 emotion5Count, emotion6Count, emotion7Count, emotion8Count]
+
+
+        // Tuple
+        labelTupleArray = [(emotion0Label, .happy, 0),
+                           (emotion1Label, .fond, 0),
+                           (emotion2Label, .love, 0),
+                           (emotion3Label, .furious, 0),
+                           (emotion4Label, .bored, 0),
+                           (emotion5Label, .frustrated, 0),
+                           (emotion6Label, .embarrassed, 0),
+                           (emotion7Label, .depressed, 0),
+                           (emotion8Label, .pathetic, 0)]
+
+
 
         backgroundImageView.contentMode = .scaleToFill
         backgroundImageView.image = UIImage(named: "PaperBackground")
@@ -103,6 +130,7 @@ class EmotionDiaryViewController: UIViewController {
 //        slime0Button.setBackgroundImage(UIImage(named: "sesac_slime1"), for: .normal)  // iOS 15 이전 Button Style: Default의 경우
 
         for i in 0..<buttonArray.count {
+            buttonArray[i]!.tag = i  // 코드 상에서 태그 설정
             buttonArray[i]!.setTitle("", for: [])
 //            buttonArray[i]!.configuration?.baseForegroundColor = .clear
 //            buttonArray[i]!.configuration?.baseBackgroundColor = .clear
@@ -143,48 +171,65 @@ class EmotionDiaryViewController: UIViewController {
     //    }
 
     // MARK: - Label이 Array일 때
+//    func designLabels() {
+//        for i in 0..<labelArray.count {
+//            labelArray[i].backgroundColor = .clear
+//            labelArray[i].textAlignment = .center
+//            labelArray[i].text = emotionDescription[i] + " " + String(emotionCountArray[i])
+//        }
+//    }
+//
+//    func updateCount(_ selected: Int) {
+//        emotionCountArray[selected] += 1
+//        labelArray[selected].text = emotionDescription[selected] + " " + String(emotionCountArray[selected])
+//    }
+
+
+    // MARK: - Label이 Tuple을 갖는 Array일 때
     func designLabels() {
-        for i in 0..<labelArray.count {
-            labelArray[i].backgroundColor = .clear
-            labelArray[i].textAlignment = .center
-            labelArray[i].text = emotionDescription[i] + " " + String(emotionCountArray[i])
+        for i in 0..<labelTupleArray.count {
+            labelTupleArray[i].0.backgroundColor = .clear
+            labelTupleArray[i].0.textAlignment = .center
+            labelTupleArray[i].0.text = labelTupleArray[i].1.rawValue + " " + String(labelTupleArray[i].2)
         }
     }
 
     func updateCount(_ selected: Int) {
-        emotionCountArray[selected] += 1
-        labelArray[selected].text = emotionDescription[selected] + " " + String(emotionCountArray[selected])
+        labelTupleArray[selected].2 += 1
+        labelTupleArray[selected].0.text = labelTupleArray[selected].1.rawValue + " " + String(labelTupleArray[selected].2)
     }
 
+    
     // MARK: - Actions
 
 
     @IBAction func slimeButtonClicked(_ sender: UIButton) {
-        var selected: Int = 0
-
-        switch sender.tag {
-        case 0:
-            selected = 0
-        case 1:
-            selected = 1
-        case 2:
-            selected = 2
-        case 3:
-            selected = 3
-        case 4:
-            selected = 4
-        case 5:
-            selected = 5
-        case 6:
-            selected = 6
-        case 7:
-            selected = 7
-        case 8:
-            selected = 8
-        default:
-            print("default")
-        }
-
-        updateCount(selected)
+//        var selected: Int = 0
+//
+//        switch sender.tag {
+//        case 0:
+//            selected = 0
+//        case 1:
+//            selected = 1
+//        case 2:
+//            selected = 2
+//        case 3:
+//            selected = 3
+//        case 4:
+//            selected = 4
+//        case 5:
+//            selected = 5
+//        case 6:
+//            selected = 6
+//        case 7:
+//            selected = 7
+//        case 8:
+//            selected = 8
+//        default:
+//            print("default")
+//        }
+//
+//        updateCount(selected)
+        updateCount(sender.tag)
     }
 }
