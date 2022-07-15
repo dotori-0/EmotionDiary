@@ -12,6 +12,7 @@ class EmotionDiaryViewController: UIViewController {
     // Background
     @IBOutlet weak var backgroundImageView: UIImageView!
 
+    @IBOutlet weak var navigationBar: UINavigationBar!
     // Buttons
     @IBOutlet weak var slime0Button: UIButton!
     @IBOutlet weak var slime1Button: UIButton!
@@ -110,13 +111,25 @@ class EmotionDiaryViewController: UIViewController {
                            (emotion8Label, .pathetic, 0)]
 
 
-
         backgroundImageView.contentMode = .scaleToFill
         backgroundImageView.image = UIImage(named: "PaperBackground")
 
         designButtons(buttonArray)
 //        designLabels(labelDict: labelDict, emotionCountArray: emotionCountArray)
         designLabels()
+
+
+//        navigationBar.isTranslucent = true  // 작동 X
+
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithTransparentBackground()
+//        appearance.shadowColor = .clear
+//        appearance.backgroundColor = .clear
+
+//        navigationBar.compactAppearance = appearance
+        navigationBar.standardAppearance = appearance
+//        navigationBar.scrollEdgeAppearance = appearance  // X
+
 
     }
 
@@ -144,6 +157,7 @@ class EmotionDiaryViewController: UIViewController {
 
 
     // MARK: - Label이 Dictionary일 때
+
 //    func designLabels(labelDict: [UILabel?: [Any]], emotionCountArray: [Int]) {
 //    func designLabels(labelDict: [UILabel?: [Any]]) {
 //        for (key, value) in labelDict {
@@ -171,6 +185,7 @@ class EmotionDiaryViewController: UIViewController {
     //    }
 
     // MARK: - Label이 Array일 때
+
 //    func designLabels() {
 //        for i in 0..<labelArray.count {
 //            labelArray[i].backgroundColor = .clear
@@ -186,6 +201,7 @@ class EmotionDiaryViewController: UIViewController {
 
 
     // MARK: - Label이 Tuple을 갖는 Array일 때
+
     func designLabels() {
         for i in 0..<labelTupleArray.count {
             labelTupleArray[i].0.backgroundColor = .clear
@@ -201,7 +217,6 @@ class EmotionDiaryViewController: UIViewController {
 
     
     // MARK: - Actions
-
 
     @IBAction func slimeButtonClicked(_ sender: UIButton) {
 //        var selected: Int = 0

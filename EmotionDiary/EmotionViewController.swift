@@ -25,7 +25,7 @@ class EmotionViewController: UIViewController {
         // 반환하는 함수 활용
         emotionFirstLabel.text = setUserNickName()
 
-        view.backgroundColor = example().0
+//        view.backgroundColor = example().0
         emotionFirstButton.setImage(UIImage(named: example().2), for: .normal)
 
     }
@@ -71,6 +71,11 @@ class EmotionViewController: UIViewController {
 //        alert.addAction(web)
         alert.addAction(ok)
 //        alert.addAction(copy)
+
+        // alert 클래스 Test
+        let alert2 = alert
+        alert2.title = "Alert 2"
+        alert2.message = "This is Alert 2."
 
         // 4.
         // present의 completion은 뭔가 내부적으로 처리하고 싶은 것이 있을 때 사용
