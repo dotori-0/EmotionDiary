@@ -73,6 +73,8 @@ class EmotionDiaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("🐶", #function)
+
         let buttonArray = [slime0Button, slime1Button, slime2Button, slime3Button, slime4Button,
                            slime5Button, slime6Button, slime7Button, slime8Button]
 
@@ -155,6 +157,23 @@ class EmotionDiaryViewController: UIViewController {
 
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        print("🐶", #function)
+//        designLabels()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        print("🐶", #function)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        print("🐶", #function)
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        print("🐶", #function)
+    }
+
     func designButtons(_ buttonArray: [UIButton?]) {
 //        slime0Button.imageView?.contentMode = .scaleAspectFit
 //        slime0Button.configuration = .default
@@ -227,7 +246,9 @@ class EmotionDiaryViewController: UIViewController {
     // MARK: - Label이 Tuple을 갖는 Array일 때
 
     func designLabels() {
+        print(#function)
         for i in 0..<labelTupleArray.count {
+            print("inside for loop")  // SideMenuViewController에서 호출 시 for문 진입 X
             labelTupleArray[i].0.backgroundColor = .clear
             labelTupleArray[i].0.textAlignment = .center
             labelTupleArray[i].0.text = labelTupleArray[i].1.rawValue + " " + String(labelTupleArray[i].2)
