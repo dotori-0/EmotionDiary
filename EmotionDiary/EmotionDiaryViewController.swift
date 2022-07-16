@@ -57,7 +57,7 @@ class EmotionDiaryViewController: UIViewController {
     var emotionCountArray: [Int] = []
     var emotionDescription = ["행복해", "좋아해", "사랑해", "분노해", "심심해", "답답해", "당황해", "우울해", "한심해"]
 
-    enum EmotionDescription: String {
+    enum EmotionDescription: String, CaseIterable {
         case happy = "행복해"
         case fond = "좋아해"
         case love = "사랑해"
@@ -69,7 +69,6 @@ class EmotionDiaryViewController: UIViewController {
         case pathetic = "한심해"
     }
 
-    @IBOutlet weak var sideMenuButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,6 +76,7 @@ class EmotionDiaryViewController: UIViewController {
         let buttonArray = [slime0Button, slime1Button, slime2Button, slime3Button, slime4Button,
                            slime5Button, slime6Button, slime7Button, slime8Button]
 
+/*
 //        labelDict = [emotion0Label: "행복해",
 //                         emotion1Label: "좋아해",
 //                         emotion2Label: "사랑해",
@@ -102,18 +102,28 @@ class EmotionDiaryViewController: UIViewController {
 
 //        emotionCountArray = [emotion0Count, emotion1Count, emotion2Count, emotion3Count, emotion4Count,
 //                                 emotion5Count, emotion6Count, emotion7Count, emotion8Count]
+*/
 
 
-        // Tuple
-        labelTupleArray = [(emotion0Label, .happy, 0),
-                           (emotion1Label, .fond, 0),
-                           (emotion2Label, .love, 0),
-                           (emotion3Label, .furious, 0),
-                           (emotion4Label, .bored, 0),
-                           (emotion5Label, .frustrated, 0),
-                           (emotion6Label, .embarrassed, 0),
-                           (emotion7Label, .depressed, 0),
-                           (emotion8Label, .pathetic, 0)]
+        // Tuple - (Emotion Label, Emotion Description, Emotion Count)
+//        labelTupleArray = [(emotion0Label, .happy, 0),
+//                           (emotion1Label, .fond, 0),
+//                           (emotion2Label, .love, 0),
+//                           (emotion3Label, .furious, 0),
+//                           (emotion4Label, .bored, 0),
+//                           (emotion5Label, .frustrated, 0),
+//                           (emotion6Label, .embarrassed, 0),
+//                           (emotion7Label, .depressed, 0),
+//                           (emotion8Label, .pathetic, 0)]
+        labelTupleArray = [(emotion0Label, .happy, UserDefaults.standard.integer(forKey: EmotionDescription.happy.rawValue)),
+                           (emotion1Label, .fond, UserDefaults.standard.integer(forKey: EmotionDescription.fond.rawValue)),
+                           (emotion2Label, .love, UserDefaults.standard.integer(forKey: EmotionDescription.love.rawValue)),
+                           (emotion3Label, .furious, UserDefaults.standard.integer(forKey: EmotionDescription.furious.rawValue)),
+                           (emotion4Label, .bored, UserDefaults.standard.integer(forKey: EmotionDescription.bored.rawValue)),
+                           (emotion5Label, .frustrated, UserDefaults.standard.integer(forKey: EmotionDescription.frustrated.rawValue)),
+                           (emotion6Label, .embarrassed, UserDefaults.standard.integer(forKey: EmotionDescription.embarrassed.rawValue)),
+                           (emotion7Label, .depressed, UserDefaults.standard.integer(forKey: EmotionDescription.depressed.rawValue)),
+                           (emotion8Label, .pathetic, UserDefaults.standard.integer(forKey: EmotionDescription.pathetic.rawValue))]
 
 
         backgroundImageView.contentMode = .scaleToFill
@@ -169,7 +179,7 @@ class EmotionDiaryViewController: UIViewController {
 
 
     // MARK: - Label이 Dictionary일 때
-
+/*
 //    func designLabels(labelDict: [UILabel?: [Any]], emotionCountArray: [Int]) {
 //    func designLabels(labelDict: [UILabel?: [Any]]) {
 //        for (key, value) in labelDict {
@@ -195,9 +205,10 @@ class EmotionDiaryViewController: UIViewController {
     //        labelDict[emotion\(selected)label]
     //
     //    }
+ */
 
     // MARK: - Label이 Array일 때
-
+/*
 //    func designLabels() {
 //        for i in 0..<labelArray.count {
 //            labelArray[i].backgroundColor = .clear
@@ -210,6 +221,7 @@ class EmotionDiaryViewController: UIViewController {
 //        emotionCountArray[selected] += 1
 //        labelArray[selected].text = emotionDescription[selected] + " " + String(emotionCountArray[selected])
 //    }
+*/
 
 
     // MARK: - Label이 Tuple을 갖는 Array일 때
@@ -225,6 +237,31 @@ class EmotionDiaryViewController: UIViewController {
     func updateCount(_ selected: Int) {
         labelTupleArray[selected].2 += 1
         labelTupleArray[selected].0.text = labelTupleArray[selected].1.rawValue + " " + String(labelTupleArray[selected].2)
+
+        saveCount(selected)
+    }
+
+    func saveCount(_ selected: Int) {
+        let key = labelTupleArray[selected].1.rawValue
+        let count = labelTupleArray[selected].2
+
+        UserDefaults.standard.set(count, forKey: key)
+
+        printUserDefaults()
+    }
+
+    func printUserDefaults() {
+        print("🦭🦭🦭🦭🦭")
+        // print all keys and values
+//        print(UserDefaults.standard.dictionaryRepresentation())
+
+        for emotion in EmotionDescription.allCases {
+            print("\(emotion): \(UserDefaults.standard.integer(forKey: emotion.rawValue))")
+        }
+
+//        for emotion in EmotionDescription.AllCases {
+//            print(emotion)
+//        }
     }
 
     
