@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0A1712A7287FA67F007B1EFA /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1712A6287FA67F007B1EFA /* Settings.storyboard */; };
+		0ACB6FDD2882951700FD4E84 /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 0ACB6FDC2882951700FD4E84 /* SideMenu */; };
+		0ACB6FDF28829FE700FD4E84 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB6FDE28829FE700FD4E84 /* SideMenuViewController.swift */; };
 		0AD797CA287BA3E200316461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD797C9287BA3E200316461 /* AppDelegate.swift */; };
 		0AD797CC287BA3E200316461 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD797CB287BA3E200316461 /* SceneDelegate.swift */; };
 		0AD797CE287BA3E200316461 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD797CD287BA3E200316461 /* ViewController.swift */; };
@@ -21,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		0A1712A6287FA67F007B1EFA /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		0ACB6FDE28829FE700FD4E84 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		0AD797C6287BA3E200316461 /* EmotionDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AD797C9287BA3E200316461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AD797CB287BA3E200316461 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ACB6FDD2882951700FD4E84 /* SideMenu in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +73,7 @@
 				0AD797CD287BA3E200316461 /* ViewController.swift */,
 				0AD797CF287BA3E200316461 /* Main.storyboard */,
 				0AD797FD287C32DB00316461 /* EmotionDiaryViewController.swift */,
+				0ACB6FDE28829FE700FD4E84 /* SideMenuViewController.swift */,
 				0AD797FF287D0BC900316461 /* EmotionViewController.swift */,
 				0A1712A6287FA67F007B1EFA /* Settings.storyboard */,
 				0AD79801287D212E00316461 /* SegmentedViewController.swift */,
@@ -95,6 +100,9 @@
 			dependencies = (
 			);
 			name = EmotionDiary;
+			packageProductDependencies = (
+				0ACB6FDC2882951700FD4E84 /* SideMenu */,
+			);
 			productName = Week2;
 			productReference = 0AD797C6287BA3E200316461 /* EmotionDiary.app */;
 			productType = "com.apple.product-type.application";
@@ -123,6 +131,9 @@
 				Base,
 			);
 			mainGroup = 0AD797BD287BA3E200316461;
+			packageReferences = (
+				0ACB6FDB2882951700FD4E84 /* XCRemoteSwiftPackageReference "SideMenu" */,
+			);
 			productRefGroup = 0AD797C7287BA3E200316461 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -155,6 +166,7 @@
 				0AD797FE287C32DB00316461 /* EmotionDiaryViewController.swift in Sources */,
 				0AD797CE287BA3E200316461 /* ViewController.swift in Sources */,
 				0AD79802287D212E00316461 /* SegmentedViewController.swift in Sources */,
+				0ACB6FDF28829FE700FD4E84 /* SideMenuViewController.swift in Sources */,
 				0AD797CA287BA3E200316461 /* AppDelegate.swift in Sources */,
 				0AD797CC287BA3E200316461 /* SceneDelegate.swift in Sources */,
 			);
@@ -376,6 +388,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0ACB6FDB2882951700FD4E84 /* XCRemoteSwiftPackageReference "SideMenu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jonkykong/SideMenu.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0ACB6FDC2882951700FD4E84 /* SideMenu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0ACB6FDB2882951700FD4E84 /* XCRemoteSwiftPackageReference "SideMenu" */;
+			productName = SideMenu;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0AD797BE287BA3E200316461 /* Project object */;
 }

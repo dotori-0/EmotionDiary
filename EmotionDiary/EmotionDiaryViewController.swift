@@ -13,6 +13,10 @@ class EmotionDiaryViewController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
 
     @IBOutlet weak var navigationBar: UINavigationBar!
+
+//    @IBOutlet weak var sideMenuBackgroundImageView: UIImageView!
+    let paperBackgroundImage = UIImage(named: "PaperBackground")
+
     // Buttons
     @IBOutlet weak var slime0Button: UIButton!
     @IBOutlet weak var slime1Button: UIButton!
@@ -65,7 +69,8 @@ class EmotionDiaryViewController: UIViewController {
         case pathetic = "한심해"
     }
 
-
+    @IBOutlet weak var sideMenuButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -112,7 +117,8 @@ class EmotionDiaryViewController: UIViewController {
 
 
         backgroundImageView.contentMode = .scaleToFill
-        backgroundImageView.image = UIImage(named: "PaperBackground")
+        backgroundImageView.image = paperBackgroundImage
+//        sideMenuBackgroundImageView.image = paperBackgroundImage
 
         designButtons(buttonArray)
 //        designLabels(labelDict: labelDict, emotionCountArray: emotionCountArray)
@@ -120,6 +126,12 @@ class EmotionDiaryViewController: UIViewController {
 
 
 //        navigationBar.isTranslucent = true  // 작동 X
+//        Navigation bars are translucent by default
+
+//        navigationBar.barStyle = .black  // ??
+        navigationBar.barTintColor = .clear  // 작동 X
+        navigationBar.scrollEdgeAppearance?.backgroundColor = .clear  // 작동 X
+
 
         let appearance = UINavigationBarAppearance()
         appearance.configureWithTransparentBackground()
@@ -127,7 +139,7 @@ class EmotionDiaryViewController: UIViewController {
 //        appearance.backgroundColor = .clear
 
 //        navigationBar.compactAppearance = appearance
-        navigationBar.standardAppearance = appearance
+        navigationBar.standardAppearance = appearance  // O
 //        navigationBar.scrollEdgeAppearance = appearance  // X
 
 
