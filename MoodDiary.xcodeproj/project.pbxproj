@@ -24,7 +24,7 @@
 /* Begin PBXFileReference section */
 		0A1712A6287FA67F007B1EFA /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		0ACB6FDE28829FE700FD4E84 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
-		0AD797C6287BA3E200316461 /* EmotionDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AD797C6287BA3E200316461 /* MoodDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AD797C9287BA3E200316461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AD797CB287BA3E200316461 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0AD797CD287BA3E200316461 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		0AD797BD287BA3E200316461 = {
 			isa = PBXGroup;
 			children = (
-				0AD797C8287BA3E200316461 /* EmotionDiary */,
+				0AD797C8287BA3E200316461 /* MoodDiary */,
 				0AD797C7287BA3E200316461 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,12 +60,12 @@
 		0AD797C7287BA3E200316461 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0AD797C6287BA3E200316461 /* EmotionDiary.app */,
+				0AD797C6287BA3E200316461 /* MoodDiary.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0AD797C8287BA3E200316461 /* EmotionDiary */ = {
+		0AD797C8287BA3E200316461 /* MoodDiary */ = {
 			isa = PBXGroup;
 			children = (
 				0AD797C9287BA3E200316461 /* AppDelegate.swift */,
@@ -81,15 +81,15 @@
 				0AD797D4287BA3E500316461 /* LaunchScreen.storyboard */,
 				0AD797D7287BA3E500316461 /* Info.plist */,
 			);
-			path = EmotionDiary;
+			path = MoodDiary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0AD797C5287BA3E200316461 /* EmotionDiary */ = {
+		0AD797C5287BA3E200316461 /* MoodDiary */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0AD797DA287BA3E500316461 /* Build configuration list for PBXNativeTarget "EmotionDiary" */;
+			buildConfigurationList = 0AD797DA287BA3E500316461 /* Build configuration list for PBXNativeTarget "MoodDiary" */;
 			buildPhases = (
 				0AD797C2287BA3E200316461 /* Sources */,
 				0AD797C3287BA3E200316461 /* Frameworks */,
@@ -99,12 +99,12 @@
 			);
 			dependencies = (
 			);
-			name = EmotionDiary;
+			name = MoodDiary;
 			packageProductDependencies = (
 				0ACB6FDC2882951700FD4E84 /* SideMenu */,
 			);
 			productName = Week2;
-			productReference = 0AD797C6287BA3E200316461 /* EmotionDiary.app */;
+			productReference = 0AD797C6287BA3E200316461 /* MoodDiary.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -122,7 +122,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0AD797C1287BA3E200316461 /* Build configuration list for PBXProject "EmotionDiary" */;
+			buildConfigurationList = 0AD797C1287BA3E200316461 /* Build configuration list for PBXProject "MoodDiary" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -138,7 +138,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0AD797C5287BA3E200316461 /* EmotionDiary */,
+				0AD797C5287BA3E200316461 /* MoodDiary */,
 			);
 		};
 /* End PBXProject section */
@@ -316,7 +316,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = EmotionDiary/Info.plist;
+				INFOPLIST_FILE = MoodDiary/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -329,7 +329,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sani.EmotionDiary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sani.MoodDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -345,7 +345,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = EmotionDiary/Info.plist;
+				INFOPLIST_FILE = MoodDiary/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -358,7 +358,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sani.EmotionDiary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sani.MoodDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -369,7 +369,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0AD797C1287BA3E200316461 /* Build configuration list for PBXProject "EmotionDiary" */ = {
+		0AD797C1287BA3E200316461 /* Build configuration list for PBXProject "MoodDiary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0AD797D8287BA3E500316461 /* Debug */,
@@ -378,7 +378,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0AD797DA287BA3E500316461 /* Build configuration list for PBXNativeTarget "EmotionDiary" */ = {
+		0AD797DA287BA3E500316461 /* Build configuration list for PBXNativeTarget "MoodDiary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0AD797DB287BA3E500316461 /* Debug */,
